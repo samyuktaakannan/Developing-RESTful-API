@@ -1,0 +1,32 @@
+postgres database
+
+create table moviestest(
+    movieID int NOT NULL,
+    movieName varchar(50) NOT NULL
+)
+
+insert into moviestest (
+    movieID,
+    movieName
+)
+values
+	(1, 'John Wick'),
+    	(2, 'Tangled'),
+    	(3, 'Andhadhun'),
+	(4, 'DDLJ'),
+    	(5, 'Singham'),
+    	(6, 'RRR');
+
+command to execute go file
+-change directory to directory in which go file is
+-go run .
+-open another command prompt and run the below commands after connection has been established
+
+commands used for running the functions
+1)curl http://localhost:8080/movies
+
+2)curl -X POST -H "Content-Type: application/json" -d "{\"movieId\": 7,\"movieName\": \"Frozen\"}" http://localhost:8080/movies
+
+3)curl -X DELETE http://localhost:8080/movies/2
+
+4)curl -X DELETE http://localhost:8080/movies
